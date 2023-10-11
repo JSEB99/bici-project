@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>EcoBici</title>
+    <link rel="stylesheet" type="text/css" href="bici.css" />
+  </head>
+  <body>
+    <h1>Análisis del sistema de bicicletas en la Ciudad de Buenos Aires</h1>
+    <div class="iframe-container">
+      <!-- <embed src="https://app.powerbi.com/view?r=eyJrIjoiYjc5M2U1ZDAtYTU4Zi00NGNlLTk3MTQtMjM2ZjZjMmUyYWVmIiwidCI6IjdiMjk5ZDc3LWJkYTktNGIyZC1iZDc3LTExMzgyOTMxNDJlOCIsImMiOjl9" width="1000" height="800"></embed> -->
+      <iframe
+        src="https://app.powerbi.com/view?r=eyJrIjoiYjc5M2U1ZDAtYTU4Zi00NGNlLTk3MTQtMjM2ZjZjMmUyYWVmIiwidCI6IjdiMjk5ZDc3LWJkYTktNGIyZC1iZDc3LTExMzgyOTMxNDJlOCIsImMiOjl9"
+        frameborder="0"
+      ></iframe>
+      <div class="form-container">
+        <form action="" id="ecobici-form">
+          <label for="mes-origen">Selecciona un mes</label>
+          <select name="mes_origen" id="mes-origen">
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+          </select>
+          <label for="dia-semana-origen">Selecciona un dia</label>
+          <select name="dia_semana_origen" id="dia-semana-origen">
+            <option value="0">Lunes</option>
+            <option value="1">Martes</option>
+            <option value="2">Miercoles</option>
+            <option value="3">Jueves</option>
+            <option value="4">Viernes</option>
+            <option value="5">Sabado</option>
+            <option value="6">Domingo</option>
+          </select>
+          <label for="quincena">Selecciona la quincena</label>
+          <select name="quincena" id="quincena">
+            <option value="1">Primera</option>
+            <option value="2">Segunda</option>
+          </select>
+          <label for="bici-model">Selecciona el modelo de bicicleta</label>
+          <select name="bici_model" id="bici-model">
+            <option value="1">ICONIC</option>
+            <option value="2">FIT</option>
+          </select>
+          <label for="categoria-edad">Selecciona la categoría de edad</label>
+          <select name="categoria_edad" id="categoria-edad">
+            <option value="1">Menor de 15 años</option>
+            <option value="2">Menor de 20 años</option>
+            <option value="3">Menor de 40 años</option>
+            <option value="4">Menor de 56 años</option>
+            <option value="5">Menor de 60 años</option>
+          </select>
+          <label for="cat-tiempo-recorrido"
+            >Selecciona el tiempo del recorrido</label
+          >
+          <select name="cat_tiempo_recorrido" id="cat-tiempo-recorrido">
+            <option value="1">menor a 30 min</option>
+            <option value="2">menor a 60 min</option>
+            <option value="3">menor a 180 min</option>
+            <option value="4">menor a 300 min</option>
+            <option value="5">menor a 720 min</option>
+          </select>
+          <label for="cat-hora-origen">Selecciona la hora de salida</label>
+          <select name="cat_hora_origen" id="cat-hora-origen">
+            <option value="1">Entre 1am y 6am</option>
+            <option value="2">Entre 7am y 10am</option>
+            <option value="3">Entre 11am y 1pm</option>
+            <option value="4">Entre 2pm y 3pm</option>
+            <option value="5">Entre 4pm y 5pm</option>
+            <option value="6">Entre 6pm y 7pm</option>
+            <option value="7">Entre 8pm y 12am</option>
+          </select>
+          <label for="codigo-estacion-nombre">Selecciona la estación</label>
+          <select name="codigo_estacion_nombre" id="codigo-estacion-nombre">
+            <option value="0">Araoz</option>
+            <option value="34">Parque Centenario</option>
+            <option value="4">Billinghurst</option>
+            <option value="6">Constitución</option>
+            <option value="15">Godoy Cruz y Libertador</option>
+            <option value="5">Carlos Gardel</option>
+            <option value="11">Facultad de Medicina</option>
+            <option value="20">Instituto Leloir</option>
+            <option value="3">Acuña de Figueroa</option>
+            <option value="44">Retiro II</option>
+            <option value="10">Facultad de Derecho</option>
+            <option value="19">Humahuaca</option>
+            <option value="49">Yatay</option>
+            <option value="13">Fitz Roy & Gorriti</option>
+            <option value="48">Velasco</option>
+            <option value="40">Plaza Italia</option>
+            <option value="2">Acevedo</option>
+            <option value="14">General Urquiza</option>
+            <option value="36">Peña</option>
+            <option value="16">Guatemala</option>
+            <option value="29">Plaza Bolivia</option>
+            <option value="41">Plaza Palermo Viejo</option>
+            <option value="32">Pueyrredón</option>
+            <option value="35">Pasteur</option>
+            <option value="23">Marcelo T. de Alvear</option>
+            <option value="33">Paraná</option>
+            <option value="24">Ministerio de Educación</option>
+            <option value="39">Plaza Irlanda</option>
+            <option value="1">Austria y French</option>
+            <option value="8">Estados Unidos y Boedo</option>
+            <option value="21">Julián Álvarez</option>
+            <option value="47">Virrey Cevallos</option>
+            <option value="18">Hospital Italiano</option>
+            <option value="37">Plaza Alemania</option>
+            <option value="17">Hospital Alemán</option>
+            <option value="30">Plaza Monseñor Miguel de Andrea</option>
+            <option value="31">Primera Junta</option>
+            <option value="26">Once II</option>
+            <option value="25">Malabia</option>
+            <option value="9">F.J.Santamaria de Oro</option>
+            <option value="7">Coronel Díaz</option>
+            <option value="28">Plaza Alberti</option>
+            <option value="45">Rodrigo Bueno</option>
+            <option value="42">Plaza Primero de Mayo</option>
+            <option value="27">Parque del Bajo</option>
+            <option value="46">San José de Flores</option>
+            <option value="43">Plaza Vicente López</option>
+            <option value="38">Plaza Bruno Giordano</option>
+            <option value="12">Federico Lacroze</option>
+            <option value="22">Macacha Güemes</option>
+          </select>
+          <input type="submit" />
+        </form>
+        <p class="prediccion">15</p>
+      </div>
+    </div>
+    <footer>
+      <p>Realizado por Leonardo y Sebastian</p>
+      <p>
+        <a href="https://github.com/LeoDataEngineer/bici_project"
+          >Github Repository</a
+        >
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
